@@ -12,6 +12,8 @@ class Circle:
 	"""
 	def __init__(self, center, radius, mass=1.0, velocity=0.0, restitution=0.5):
 		self.center = np.array(center)
+		self.x = self.center[0]
+		self.y = self.center[1]
 		self.radius = radius
 		self.mass = mass
 		self.inv_mass = 1 / mass
@@ -38,7 +40,9 @@ class Manifold:
 
 
 def are_colliding(A, B):
-	return (A.radius + B.radius) > np.linalg.norm(A.center - B.center)
+	return (A.radius + B.radius)**2 > (B.x - A.x)**2 + (B.y - A.y)**2
+
+def handle_circle_stationary_collision
 
 def compute_manifold(A, B):
 	direction = B.center - A.center

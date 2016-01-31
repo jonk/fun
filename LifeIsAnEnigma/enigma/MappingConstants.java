@@ -1,6 +1,9 @@
 package enigma;
 
 class MappingConstants {
+
+    /* We don't want this to ever be instantiated */
+    private MappingConstants() {}
     
     /* Each of the below rotors and mappings are relative to the standard alphabet */
     public static final String INNER_RING = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";

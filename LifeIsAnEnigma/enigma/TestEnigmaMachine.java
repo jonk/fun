@@ -1,0 +1,18 @@
+package enigma;
+
+import org.junit.runner.JUnitCore;
+import org.junit.runner.Result;
+import org.junit.runner.notification.Failure;
+
+public class TestEnigmaMachine {
+
+   public static void main(String[] args) {
+      Result result = JUnitCore.runClasses(EnigmaTest.class);
+      for (Failure failure : result.getFailures()) {
+         System.out.println(failure.toString());
+      }
+      System.out.println("WOOO YOU FUCKING DID IT THE TESTS PASSED!");
+   }
+
+
+} 

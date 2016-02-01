@@ -33,9 +33,9 @@ class Mapper {
 
     @Override
     public String toString() {
-        String sb = "";
-        sb = sb.concat("Outer Ring: " + getOuterRing() + "\n");
-        sb = sb.concat("Inner Ring: " + getInnerRing());
-        return sb;
+        return "Mapper{" +
+                "outerRing='" + outerRing + '\'' +
+                ", innerRing='" + innerRing + '\'' +
+                '}';
     }
 }

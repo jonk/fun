@@ -16,7 +16,7 @@ public class RotorTest {
     @Test
     public void testRotateInnerRing() {
         Rotor rotor = new Rotor("ABCD", 0, 0);
-        rotor.setInnerRing(rotor.rotateRing(2, rotor.getInnerRing()));
+        rotor.rotateRing(2, false);
         assertEquals("YZABCDEFGHIJKLMNOPQRSTUVWX", rotor.getInnerRing());
     }
 
@@ -27,7 +27,7 @@ public class RotorTest {
         assertEquals(rotor.encodeOutput('A'), 'E');
 
         // After rotating the inner ring, it is expected that the output will change
-        rotor.setInnerRing(rotor.rotateRing(5, rotor.getInnerRing()));
+        rotor.rotateRing(5, false);
         assertEquals(rotor.encodeOutput('A'), 'G');
     }
 

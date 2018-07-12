@@ -20,18 +20,18 @@ public class EnigmaMachine {
     }
 
     public char encode(char letter) {
-
+        return null;
     }
 
     private char forward(char letter) {
-
+        return null;
     }
 
     private char reverse(char letter) {
-
+        return null;
     }
 
     private char reflect(char letter) {
-
+        return null;
     }
 }
